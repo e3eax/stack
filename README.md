@@ -24,4 +24,48 @@ Stack<int> intStack;
 Stack<double> doubleStack;
 
 // create a stack of chars
-Stack<char> charStack;```
+Stack<char> charStack;
+
+```
+Additionally, you can also pass a vector into the constructor to initialize the stack with a collection of elements. For example:
+
+```cpp
+std::vector<std::string> words{"this", "is", "a", "sentence"};
+Stack<std::string> wordsStack(words);
+```
+## Operations
+The `Stack` class supports the following operations:
+
+push: adds an element to the top of the stack.
+pop: removes the element from the top of the stack.
+top: returns the element at the top of the stack without removing it.
+isEmpty: returns true if the stack is empty, false otherwise.
+size: returns the number of elements in the stack.
+### Example
+Here's an example of how to use the stack:
+
+```cpp
+#include "Stack.h"
+#include <iostream>
+
+int main() {
+    // Create a stack of ints
+    Stack<int> stack;
+
+    // Push some elements onto the stack
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    // Pop an element off the stack
+    stack.pop();
+
+    // Print the top element of the stack
+    std::cout << "Top element: " << stack.top() << std::endl;
+
+    // Print the size of the stack
+    std::cout << "Stack size: " << stack.size() << std::endl;
+
+    return 0;
+}
+```
