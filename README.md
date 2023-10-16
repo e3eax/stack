@@ -9,7 +9,7 @@ A simple, yet robust and efficient implementation of the stack data structure in
 To use the stack, simply create an instance of the `Stack` class and specify the data type of the elements you want the stack to hold. For example:
 
 ```cpp
-#include "stack.h"
+#include "Stack.h"
 
 // create a stack of strings
 Stack<std::string> stringStack;
