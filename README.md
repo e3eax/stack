@@ -1,4 +1,4 @@
-# Stack
+# Generic Stack
 
 ## Overview
 
@@ -17,6 +17,19 @@ To use this stack, first, download or clone the repository. Then, include the `S
 ```cpp
 #include "Stack.h"
 ```
+
+## Stack Operations
+
+The `Stack` class supports the following operations:
+
+- `display()`: Displays all the elements in the stack.
+- `size()`: Returns the number of elements in the stack.
+- `pop()`: Removes the element from the top of the stack.
+- `push(element)`: Adds an element to the top of the stack.
+- `is_empty()`: Returns `true` if the stack is empty, `false` otherwise.
+- `top()`: Returns the element at the top of the stack without removing it.
+- `peek(index)`: Returns the value at the specified index or throws an `out_of_range` exception if the index is out of range.
+- `change(index, value)`: Sets the specified value at the specified index or throws an `out_of_range` exception if the index is out of range.
 
 ## Usage
 
@@ -56,18 +69,6 @@ Stack<bool> booleansStack(booleans);
 // ... You can initialize a stack with a vector of any type.
 ```
 
-## Stack Operations
-
-The `Stack` class supports the following operations:
-
-- `display()`: Displays all the elements in the stack.
-- `size()`: Returns the number of elements in the stack.
-- `pop()`: Removes the element from the top of the stack.
-- `push(element)`: Adds an element to the top of the stack.
-- `is_empty()`: Returns `true` if the stack is empty, `false` otherwise.
-- `top()`: Returns the element at the top of the stack without removing it.
-- `peek(index)`: Returns the value at the specified index or throws an `out_of_range` exception if the index is out of range.
-- `change(index, value)`: Sets the specified value at the specified index or throws an `out_of_range` exception if the index is out of range.
 
 ## Example
 
