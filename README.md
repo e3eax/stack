@@ -11,37 +11,46 @@ To use the stack, simply create an instance of the `Stack` class and specify the
 ```cpp
 #include "Stack.h"
 
-// create a stack of strings
+// Create a stack of strings
 Stack<std::string> stringStack;
 
-// create a stack of bools
+// Create a stack of bools
 Stack<bool> boolStack;
 
-// create a stack of ints
+// Create a stack of ints
 Stack<int> intStack;
 
-// create a stack of doubles
+// Create a stack of doubles
 Stack<double> doubleStack;
 
-// create a stack of chars
+// Create a stack of chars
 Stack<char> charStack;
-
 ```
+
 Additionally, you can also pass a vector into the constructor to initialize the stack with a collection of elements. For example:
 
 ```cpp
 std::vector<std::string> words{"this", "is", "a", "sentence"};
 Stack<std::string> wordsStack(words);
+std::vector<int> numbers{1, 2, 3, 4, 5};
+Stack<int> wordsStack(words);
+std::vector<bool> booleans{false, true, true, false};
+Stack<int> wordsStack(words);
+...
 ```
+
 ## Operations
+
 The `Stack` class supports the following operations:
 
-push: adds an element to the top of the stack.
-pop: removes the element from the top of the stack.
-top: returns the element at the top of the stack without removing it.
-isEmpty: returns true if the stack is empty, false otherwise.
-size: returns the number of elements in the stack.
-### Example
+- `push`: Adds an element to the top of the stack.
+- `pop`: Removes the element from the top of the stack.
+- `top`: Returns the element at the top of the stack without removing it.
+- `isEmpty`: Returns `true` if the stack is empty, `false` otherwise.
+- `size`: Returns the number of elements in the stack.
+
+## Example
+
 Here's an example of how to use the stack:
 
 ```cpp
