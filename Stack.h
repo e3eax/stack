@@ -25,13 +25,13 @@ class Stack {
  public:
   Stack(const vector<T>& _v = {}) : _vector(std::move(_v)) { set_values(); }
 
-  void set_size() { size = get_size(); }
+  void set_size() { size = size(); }
 
-  void set_top() { top = get_size() - 1; }
+  void set_top() { top = size() - 1; }
 
-  int get_size() const { return _vector.size(); }
+  int size() const { return _vector.size(); }
 
-  int get_top() const { return top; }
+  int top() const { return top; }
 
   bool is_empty() const { return get_size() <= 0; }
 
