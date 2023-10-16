@@ -14,30 +14,30 @@ template <typename T>
 class Stack {
  private:
   int s_size = 0;
-  int top = -1;
+  int s_top = -1;
   vector<T> _vector = {};
 
  public:
   Stack(const vector<T>& _v = {}) : _vector(std::move(_v)) {
     s_size = _vector.size();
-    top = s_size - 1;
+    s_top = s_size - 1;
   }
 
-  int get_size() const { return s_size; }
+  int size() const { return s_size; }
 
-  int get_top() const { return top; }
+  int top() const { return s_top; }
 
   bool is_empty() const { return s_size <= 0; }
 
   void pop() {
     if (s_size <= 0) return;
 
-    --top;
+    --s_top;
     --s_size;
   }
 
   void push(T val) {
-    ++top;
+    ++s_top;
     ++s_size;
     if (s_size > _vector.size()) {
       _vector.push_back(val);
