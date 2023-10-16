@@ -1,6 +1,3 @@
-Here's an improved version of your README.md:
-
-```markdown
 # Stack
 
 ## Overview
@@ -102,6 +99,3 @@ int main() {
     return 0;
 }
 ```
-```
-
-This improved version includes the new operation `peek` you added to your example, along with the missing vector initialization examples. It also uses consistent language and formatting for clarity.
