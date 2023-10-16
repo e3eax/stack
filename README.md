@@ -12,7 +12,7 @@ A generic and efficient stack data structure implemented in C++. It is designed 
 
 ## Installation
 
-To use this stack, simply include the `Stack.h` file in your project:
+To use this stack, first, download or clone the repository. Then, include the `Stack.h` file in your project:
 
 ```cpp
 #include "Stack.h"
@@ -53,7 +53,7 @@ Stack<int> numbersStack(numbers);
 std::vector<bool> booleans{false, true, true, false};
 Stack<bool> booleansStack(booleans);
 
-etc...
+// ... You can initialize a stack with a vector of any type.
 ```
 
 ## Stack Operations
@@ -64,8 +64,9 @@ The `Stack` class supports the following operations:
 - `pop()`: Removes the element from the top of the stack.
 - `top()`: Returns the element at the top of the stack without removing it.
 - `is_empty()`: Returns `true` if the stack is empty, `false` otherwise.
-- `peek(index)`: Returns the value at the specified index or throws an out_of_range error.
+- `peek(index)`: Returns the value at the specified index or throws an `out_of_range` exception if the index is out of range.
 - `size()`: Returns the number of elements in the stack.
+- `change(index, value)`: Sets the specified value at the specified index or throws an `out_of_range` exception if the index is out of range.
 
 ## Example
 
