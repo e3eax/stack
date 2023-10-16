@@ -60,12 +60,13 @@ Stack<bool> booleansStack(booleans);
 
 The `Stack` class supports the following operations:
 
-- `push(element)`: Adds an element to the top of the stack.
-- `pop()`: Removes the element from the top of the stack.
-- `top()`: Returns the element at the top of the stack without removing it.
-- `is_empty()`: Returns `true` if the stack is empty, `false` otherwise.
-- `peek(index)`: Returns the value at the specified index or throws an `out_of_range` exception if the index is out of range.
+- `display()`: Displays all the elements in the stack.
 - `size()`: Returns the number of elements in the stack.
+- `pop()`: Removes the element from the top of the stack.
+- `push(element)`: Adds an element to the top of the stack.
+- `is_empty()`: Returns `true` if the stack is empty, `false` otherwise.
+- `top()`: Returns the element at the top of the stack without removing it.
+- `peek(index)`: Returns the value at the specified index or throws an `out_of_range` exception if the index is out of range.
 - `change(index, value)`: Sets the specified value at the specified index or throws an `out_of_range` exception if the index is out of range.
 
 ## Example
@@ -96,6 +97,10 @@ int main() {
 
     // Print the value of the specified index
     std::cout << "Value at index 1: " << stack.peek(1) << std::endl;
+
+    // Print each element contained in the stack
+    stack.display();
+
 
     return 0;
 }
