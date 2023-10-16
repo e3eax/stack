@@ -37,7 +37,7 @@ Stack<int> wordsStack(words);
 std::vector<bool> booleans{false, true, true, false};
 Stack<int> wordsStack(words);
 
-**...**
+**etc...**
 ```
 
 ## Operations
