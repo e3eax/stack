@@ -30,7 +30,7 @@ class Stack {
   bool is_empty() const { return s_size <= 0; }
 
   void pop() {
-    if (s_size <= 0) return;
+    if (size() <= 0) return;
 
     --s_top;
     --s_size;
@@ -39,10 +39,11 @@ class Stack {
   void push(T val) {
     ++s_top;
     ++s_size;
-    if (s_size > _vector.size()) {
+
+    if (size() > _vector.size()) {
       _vector.push_back(val);
     } else {
-      _vector[top] = val;
+      _vector[top()] = val;
     }
   }
 
@@ -50,9 +51,10 @@ class Stack {
     if (is_empty()) {
       throw out_of_range("[change] -> Stack is empty");
     }
-    if (idx < 0 || idx >= s_size) {
+    if (idx < 0 || idx >= size()) {
       throw out_of_range("[change] -> Index is out of range");
     }
+
     _vector.at(idx) = val;
   }
 
@@ -63,13 +65,14 @@ class Stack {
     if (idx >= s_size || idx < 0) {
       throw out_of_range("[peek] -> Index is out of range");
     }
+
     return _vector.at(idx);
   }
 
   void print_vals() {
     cout << endl;
-    cout << "Stack size: " << s_size << endl << endl;
-    cout << "Top: " << top << endl;
+    cout << "Stack size: " << size() << endl << endl;
+    cout << "Top: " << top() << endl;
   }
 
   void display() {
@@ -77,8 +80,8 @@ class Stack {
       return print_vals();
     }
 
-    for (const auto& item : _vector) {
-      cout << item << endl;
+    for (int i = 0; i < size(); i++) {
+      cout << _vector.at(i) << endl;
     }
 
     print_vals();
